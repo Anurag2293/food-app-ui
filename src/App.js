@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { ColorModeContext, ColorModeState } from './context/mode/ColorModeState';
+import Navbar from './components/Navbar';
+import { Typography } from '@mui/material';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App () {
+	return (
+		<>
+			<ColorModeState>
+				<Navbar />
+				<Typography>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates eum repellendus eligendi ut magni fuga. Consequatur nulla, mollitia deserunt quaerat vel sit quia earum quam quidem omnis aperiam exercitationem.
+				</Typography>
+			</ColorModeState>
+		</>
+	)
 }
-
-export default App;
