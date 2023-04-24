@@ -1,21 +1,12 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import ToggleOffIcon from '@mui/icons-material/ToggleOff';
-import ToggleOnIcon from '@mui/icons-material/ToggleOn';
-
-import { useTheme } from '@mui/material/styles';
-import { ColorModeContext } from '../context/mode/ColorModeState';
+import UtilityBar from './UtilityBar';
+import { Paper } from '@mui/material';
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
@@ -31,27 +22,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-function UtilityBar() {
-	const theme = useTheme();
-	const colorMode = React.useContext(ColorModeContext);
-	return (
-        <Box
-            sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', px: '13%', bgcolor: '#673AB7', py: 0}}
-        >
-                <Typography color={'#ffffff'}>Dark Mode</Typography>
-                <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-                    {theme.palette.mode === 'dark' ? <ToggleOnIcon fontSize='large'/> : <ToggleOffIcon fontSize='large' />}
-                </IconButton>
-        </Box>
-	);
-}
-
 export default function Navbar() {
     return (
         <>
         <UtilityBar />
-        <Box sx={{ 
-            flexGrow: 1, 
+        <Paper elevation={8} sx={{ 
+            flexGrow: 1,
+            boxShadow: '1rem'
         }}>
             <AppBar position="static" sx={{ px: '10%' }}>
                 <Toolbar sx={{display: 'flex', justifyContent: 'center'}}>
@@ -73,7 +50,7 @@ export default function Navbar() {
                     />
                 </Toolbar>
             </AppBar>
-        </Box>
+        </Paper>
         </>
     );
 }

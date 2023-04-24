@@ -1,15 +1,18 @@
-import { ColorModeContext, ColorModeState } from './context/mode/ColorModeState';
-import Navbar from './components/Navbar';
-import { Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
+import { ColorModeState } from './context/mode';
+import Navbar from './pages/Navbar.js';
+import Home from './pages/Home';
 
 export default function App () {
+	const theme = useTheme();
+	console.log(theme.palette.mode)
+
 	return (
 		<>
 			<ColorModeState>
 				<Navbar />
-				<Typography>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates eum repellendus eligendi ut magni fuga. Consequatur nulla, mollitia deserunt quaerat vel sit quia earum quam quidem omnis aperiam exercitationem.
-				</Typography>
+				<Home />
 			</ColorModeState>
 		</>
 	)
