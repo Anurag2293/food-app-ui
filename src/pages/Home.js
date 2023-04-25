@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from '@mui/material/Paper'
 import Hero from '../components/Hero'
+import Categories from '../components/Categories'
 
 const Home = () => {
     return (
@@ -9,10 +10,13 @@ const Home = () => {
                 sx={{
                     width: '100%',
                     height: '100vh',
-                    py: '1rem'
+                    display: 'flex',
+                    flexFlow: 'column',
+                    alignItems: 'center',
                 }}
             >
                 <Hero />
+                <Categories />
             </Paper>
         </>
     )

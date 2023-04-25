@@ -35,7 +35,7 @@ const Hero = () => {
         <Paper
             sx={{
                 width: '80%',
-                mx: 'auto',
+                // mx: 'auto',
                 bgcolor: 'red',
                 borderRadius: '40px'
             }}
