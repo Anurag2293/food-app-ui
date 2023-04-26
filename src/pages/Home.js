@@ -9,7 +9,6 @@ const Home = () => {
             <Paper
                 sx={{
                     width: '100%',
-                    height: '100vh',
                     display: 'flex',
                     flexFlow: 'column',
                     alignItems: 'center',
