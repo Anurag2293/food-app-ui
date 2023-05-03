@@ -3,7 +3,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Typography } from '@mui/material'
 
 import backgroundOne from './assets/background1.avif';
-import backgroundTwo from './assets/background-2.jpg';
+// import backgroundTwo from './assets/background-2.jpg';
 
 function Item(props)
 {
